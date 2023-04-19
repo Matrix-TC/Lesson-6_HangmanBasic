@@ -51,17 +51,17 @@ public class HangmanBasic {
             attemptCount++;
 
             // To print message at the end
-            boolean allCorrect = true;
+            boolean completed = true;
             for (int i = 0; i < guessedChars.length; i++) {
                 if (!guessedChars[i]){
-                    allCorrect = false;
+                    completed = false;
                     break;
                 }
             }
-            if (allCorrect){
-                char message[] = new char[hiddenWord.length];
+            if (completed){
+                char endMessage[] = new char[hiddenWord.length];
                 for (int i = 0; i < hiddenWord.length; i++) {
-                    message[i] = hiddenWord[i];
+                    endMessage[i] = hiddenWord[i];
                 }
                 System.out.println("\nCongrats! The hidden word is correctly predicted!");
                 break;
